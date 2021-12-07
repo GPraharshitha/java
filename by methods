@@ -1,0 +1,27 @@
+class Student3
+{
+  String name;
+  int marks;
+  void insert(String q,int m)
+{
+  name=q;
+  marks=m;
+}
+ void displayInfo()
+{
+   System.out.println(name+":"+marks);
+}
+}
+class Student4
+{
+  public static void main(String args[])
+{
+   Student3 s1=new Student3();
+   Student3 s2=new Student3();
+   s1.insert("hima",90);
+   s2.insert("kalyani",75);
+   s1.displayInfo();
+   s2.displayInfo();
+
+}  
+}
