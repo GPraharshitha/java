@@ -1,0 +1,29 @@
+final class bike
+{
+ final int a=5;
+void method()
+{
+ a=42;
+System.out.println(+a);
+}
+final void bike()
+{
+  System.out.println(" Bike is ready");
+}
+}
+class Car extends Bike
+{
+void bike()
+{
+ System.out.println(" Bike is ready");
+}
+}
+class Fine
+{
+public static void main(String args[])
+{
+  Car c=new Car();
+  c.method();
+  c.bike();
+}
+}
