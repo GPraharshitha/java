@@ -1,0 +1,46 @@
+class Figure
+{
+int dim1,dim2;
+void area()
+{
+System.out.println("The area of the object is undifined:");
+}
+
+}
+
+class Rectangle extends Figure
+{
+void area(int l,int b)
+{
+int area;
+ dim1=l;
+ dim2=b;
+ area=dim1*dim2;
+System.out.println("the area of the reactangle is"+" "+area+":");
+}
+
+}
+
+class Triangle extends Figure
+{
+void area(int b,int h)
+{
+ double area;
+   dim1=b;
+   dim2=h;
+   area=0.5*dim1*dim2;
+  System.out.println("the area of the triangle is"+" "+area+":");
+}
+
+}
+
+class Override
+{
+public static void main(String args[])
+{
+ Rectangle r=new Rectangle();
+ r.area(20,40);
+ Triangle t= new Triangle();
+ t.area(2,1);
+}
+}
