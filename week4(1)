@@ -1,0 +1,55 @@
+import java.util.Scanner;
+class  Employe
+{
+    String name,des;
+    int id;
+   Scanner s=new Scanner(System.in);
+ void readDetails()
+{
+   System.out.println("enter name");
+   name=s.nextLine();
+   System.out.println("enter designation ");
+   des=s.nextLine();
+   System.out.println("enter id");
+   id=s.nextInt();
+}
+}
+class Salary extends Employe
+{
+   int  np,hra,da,bp,pf;
+void readSalary()
+{
+  System.out.println("enter Basic salary");
+  bp=s.nextInt();
+  System.out.println("enter House rent allowence");
+  hra=s.nextInt();
+  System.out.println("enter dearness allowance");
+  da=s.nextInt();
+}
+void calculateSalary()
+{
+  np=(bp+hra+da-pf);
+}
+void displaySalary()
+{
+  System.out.println("the net salary of "+name+" "+"is:"+np);
+}
+}
+class Workers
+{
+ public static void main(String args[])
+{
+  Scanner sc=new Scanner(System.in);
+   int n,i;
+  System.out.println("number of employes:");
+  n=sc.nextInt();
+  Salary a[]=new Salary[n];
+  for(i=0;i<a.length;i++)
+{
+   a[i]=new Salary();
+   a[i].readDetails();
+   a[i].readSalary();
+   a[i].calculateSalary();
+   a[i].displaySalary();
+}
+}
