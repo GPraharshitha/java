@@ -1,0 +1,44 @@
+class Room
+{
+    int length;
+   int breadth;
+void room()
+{
+System.out.println("Method with no parameters");
+   length=20;
+   breadth=40;
+}
+void room(int l)
+{
+System.out.println("Method with onje parameter");
+  length=l;
+  breadth=40;
+}
+void room(int l,int b)
+{
+  System.out.println("Method with two parameters");
+  length=l;
+  breadth=b;
+}
+int area()
+{
+ return length*breadth;
+}
+}
+class Calculation
+{
+public static void main(String args[])
+{
+int l;
+Room r=new Room();
+r.room();
+l=r.area();
+System.out.println("The area of the room is"+l+":");
+r.room(20);
+l=r.area();
+System.out.println("The area of the room is"+l+":");
+r.room(10,16);
+l=r.area();
+System.out.println("The area of the room is"+l+":");
+}
+}
