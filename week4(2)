@@ -1,0 +1,60 @@
+import java.util.Scanner;
+class Student
+{
+  String name;
+   int rno,total;
+   int sub1,sub2,sub3,sub4,sub5,sub6;
+  Scanner sc=new Scanner(System.in);
+void displayInfo()
+{
+  System.out.println("Enter name");
+  name=sc.nextLine();
+  System.out.println("Enter rollno");
+  rno=sc.nextInt();
+}
+}
+class Test extends Student
+{
+ void readMarks()
+{
+ System.out.println("enter sub1 marks");
+ sub1=sc.nextInt();
+ System.out.println("enter sub 2 marks");
+ sub2=sc.nextInt();
+ System.out.println("enter sub3 marks");
+ sub3=sc.nextInt();
+ System.out.println("enter sub4 marks");
+ sub4=sc.nextInt();
+ System.out.println("enter sub5 marks");
+ sub5=sc.nextInt();
+ System.out.println("enter sub6 marks");
+ sub6=sc.nextInt();
+}
+void displayMarks()
+{
+  total=(sub1+sub2+sub3+sub4+sub5+sub6);
+}
+ void displayResult()
+{
+  System.out.println("the total marks obtained by"+name+" "+"is:"+total);
+}
+}
+class Students
+{
+public static void main(String args[])
+{
+Scanner s=new Scanner(System.in);
+int i,n;
+System.out.println("Number of students");
+n=s.nextInt();
+Test t[ ]=new Test[n];
+for(i=0;i<t.length;i++)
+{
+t[i]=new Test();
+t[i].displayInfo();
+t[i].readMarks();
+t[i].displayMarks();
+t[i].displayResult();
+}
+}
+}
